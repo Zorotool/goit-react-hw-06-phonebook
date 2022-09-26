@@ -33,7 +33,7 @@ function App() {
   const filtredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(normalizedFilter),
   );
-
+console.log(filtredContacts);
     return (
       <div>     
         <h1>Phonebook</h1>

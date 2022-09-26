@@ -6,7 +6,7 @@ import ContactItem from "components/ContactItem";
 const ContactList = ({ filtredContacts,onDeleteContact }) => (
     <ul>
         {filtredContacts.map(contact => (
-            <ContactItem contact={contact} onDeleteContact={onDeleteContact}/>    
+            <ContactItem key={contact.idKey} contact={contact} onDeleteContact={onDeleteContact}/>    
         ))}
         </ul>
 );

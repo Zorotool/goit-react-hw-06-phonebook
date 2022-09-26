@@ -1,12 +1,14 @@
-import {useState} from "react";
+import { useState } from "react";
+
 import PropTypes from 'prop-types';
 import styles from './Form.module.css';
+import { nanoid } from "@reduxjs/toolkit";
 
 function Form({onSubmit}){
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-    
+     
 
   const changeInputName = event => {
     setName(event.currentTarget.value);
@@ -18,7 +20,10 @@ function Form({onSubmit}){
 
     const formSubmit = event => {
         event.preventDefault();        
-        const data = { name, number };
+        const idKey = nanoid();
+      const data = { name, number, idKey };
+      console.log(data);
+      // console.log(idd);
         onSubmit(data);
         reset();
     };

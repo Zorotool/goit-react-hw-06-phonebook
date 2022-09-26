@@ -1,3 +1,4 @@
+
 import { configureStore } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import {
@@ -41,6 +42,8 @@ const contactsReducer = persistReducer(
   persistConfig,
   contactsSlice.reducer
 );
+
+
 
 export const { addContact, deleteContact, changeFilter } = contactsSlice.actions;
 
