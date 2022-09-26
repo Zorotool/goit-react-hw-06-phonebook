@@ -7,7 +7,7 @@ function ContactItem({ contact, onDeleteContact }) {
         
         <li className={styles.item}>
                 <p className={styles.contact}>{contact.name}: {contact.number}</p>
-                <button onClick={()=>onDeleteContact(contact.name)} className={styles.button}>Delete</button>
+                <button onClick={()=>onDeleteContact(contact.idKey)} className={styles.button}>Delete</button>
                 </li>
         
     )
