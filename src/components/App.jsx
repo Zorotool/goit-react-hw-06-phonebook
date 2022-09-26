@@ -11,7 +11,7 @@ function App() {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.contacts.filter);
-  const onDeleteContact = name => dispatch(deleteContact(name));
+  const onDeleteContact = idKey => dispatch(deleteContact(idKey));
   
   const formSubmitHandler = data => {   
 
